@@ -11,6 +11,8 @@
   "author": "Kelvin de Miranda Barros",
   "devDependencies": {
     "@types/node": "^17.0.42",
-    "nodemon": "^2.0.16"
+    "eslint": "^8.17.0",
+    "nodemon": "^2.0.16",
+    "prettier": "^2.6.2"
   }
 }
