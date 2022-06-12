@@ -2,14 +2,14 @@ import { parse } from 'node:url';
 
 // import data from './database/data.json';
 import { DEFAULT_HEADER } from './util/util.js';
+import { hero_routes } from './routes/hero.js';
+
+const heroes = hero_routes({
+  heroes_service: {},
+});
 
 const all_routes = {
-  '/heroes:get': async (request, response) => {
-    throw new Error('Test error.');
-    response.writeHead(404, DEFAULT_HEADER);
-    response.write('Heroes');
-    response.end();
-  },
+  ...heroes,
   // 404 routes:
   default: (request, response) => {
     response.writeHead(404, { 'content-type': 'application/json' });
