@@ -36,7 +36,7 @@ test('Hero Integration Test Suite', async (t) => {
     // Checks the body.
     assert.deepStrictEqual(
       result.success,
-      'User created with success!',
+      'Hero created with success!',
       'it should return a valid text message.'
     );
 

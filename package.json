@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "start": "nodemon src/index.js",
-    "test": "echo \"Test\" && exit 1"
+    "test": "node --test tests/"
   },
   "author": "Kelvin de Miranda Barros",
   "devDependencies": {
