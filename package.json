@@ -8,5 +8,8 @@
     "start": "node src/index.js",
     "test": "echo \"Test\" && exit 1"
   },
-  "author": "Kelvin de Miranda Barros"
+  "author": "Kelvin de Miranda Barros",
+  "devDependencies": {
+    "@types/node": "^17.0.42"
+  }
 }
