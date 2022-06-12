@@ -5,11 +5,12 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "start": "node src/index.js",
+    "start": "nodemon src/index.js",
     "test": "echo \"Test\" && exit 1"
   },
   "author": "Kelvin de Miranda Barros",
   "devDependencies": {
-    "@types/node": "^17.0.42"
+    "@types/node": "^17.0.42",
+    "nodemon": "^2.0.16"
   }
 }
