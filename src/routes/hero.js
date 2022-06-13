@@ -11,7 +11,7 @@ const hero_routes = ({ heroes_service }) => ({
     // response.writeHead(201, DEFAULT_HEADER);
     response.write('Heroes');
     response.end();
-  },
+  }
 });
 
 export { hero_routes };
