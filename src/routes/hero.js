@@ -24,7 +24,7 @@ const hero_routes = ({ heroes_service }) => ({
       })
     );
     return response.end();
-  },
+  }
 });
 
 export { hero_routes };
