@@ -1,11 +1,19 @@
-import { parse } from 'node:url';
+import { fileURLToPath, parse } from 'node:url';
+import { join, dirname } from 'node:path';
 
 // import data from './database/data.json';
 import { DEFAULT_HEADER } from './util/util.js';
 import { hero_routes } from './routes/hero.js';
+import { generate_instance } from './factories/hero.js';
 
+const current_directory = dirname(fileURLToPath(import.meta.url));
+const file_path = join(current_directory, './../database', 'data.json');
+
+const hero_service = generate_instance({
+  file_path
+});
 const heroes = hero_routes({
-  heroes_service: {},
+  heroes_service: hero_service
 });
 
 const all_routes = {
@@ -15,7 +23,7 @@ const all_routes = {
     response.writeHead(404, { 'content-type': 'application/json' });
     response.write('Ooops, route not found.');
     response.end();
-  },
+  }
 };
 
 const handler = (request, response) => {
@@ -37,7 +45,7 @@ const error_handler = (response) => {
     response.writeHead(500, DEFAULT_HEADER);
     response.write(
       JSON.stringify({
-        error: 'Some error happened.',
+        error: 'Some error happened.'
       })
     );
 
